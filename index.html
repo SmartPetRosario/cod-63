@@ -69,7 +69,9 @@
 
 
         function actualizarUbicacionEnBaseDeDatos() {
-            const urlParams = "https://smartpet-1d59e-default-rtdb.firebaseio.com/smartpet/mascotas/502/datosMascotas.json";
+            const dato = 502;
+
+            const urlParams = `https://smartpet-1d59e-default-rtdb.firebaseio.com/smartpet/mascotas/${dato}/datosMascotas.json`;
             fetch(urlParams, {
                 method: 'PATCH',
                 headers: {
@@ -125,19 +127,19 @@
 
                     <img src="./assets/heterosexual.png" title="icnos" class="iconos-datos-mascota ">
                     <p class="sexo-mascota">
-                        Macho
+                        Sexo
                     </p>
                 </div>
                 <div class="contenedor-datos-mascota">
                     <img src="./assets/latido-del-corazon.png" title="icnos" class="iconos-datos-mascota ">
                     <p class="edad-mascota">
-                        2
+                        Edad
                     </p>
                 </div>
                 <div class="contenedor-datos-mascota">
                     <img src="./assets/locato.png" title="icnos" class="iconos-datos-mascota ">
                     <p class="ubicacion-mascota">
-                        CABA
+                       Ubicacion
                     </p>
                 </div>
             </div>
@@ -156,7 +158,7 @@
         <section class="contactos-mascota">
             <h2 class="contacto text-center">Contactos</h2>
             <div class="contenedor-contacto">
-                <p class="nombre-contacto" id="nombre-contacto1">Marina </p>
+                <p class="nombre-contacto" id="nombre-contacto1">Persona 1 </p>
                 <div class="redes-sociales">
                     <!-- Botón de WhatsApp -->
                     <button class="btn btn-primary whatsapp-redes" id="whatsapp-redes1">
@@ -196,7 +198,7 @@
                 </div>
             </div>
             <div class=" contenedor-contacto">
-                <p class="nombre-contacto" id="nombre-contacto2">Mariana</p>
+                <p class="nombre-contacto" id="nombre-contacto2">Persona 2</p>
                 <div class="redes-sociales">
                     <button class="btn btn-primary whatsapp-redes" id="whatsapp-redes2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -238,7 +240,9 @@
 
         // Función para obtener los datos de Firebase y guardarlos en la variable "datosMascota"
         function obtenerDatosMascotas() {
-            const url = "https://smartpet-1d59e-default-rtdb.firebaseio.com/smartpet/mascotas/502.json";
+            const dato = 502;
+            const url = `https://smartpet-1d59e-default-rtdb.firebaseio.com/smartpet/mascotas/${dato}.json`;
+
 
             fetch(url)
                 .then((response) => response.json())
