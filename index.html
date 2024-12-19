@@ -103,9 +103,9 @@
         function actualizarUbicacionEnBaseDeDatos() {
             // Obtener el ID de la mascota desde los parámetros de la URL
             const urlParams = new URLSearchParams(window.location.search);
-            const registroId = urlParams.get("mascota");
+            const registroId = 502;
             const urldatosmascotas = `https://smartpet-1d59e-default-rtdb.firebaseio.com/smartpet/mascotas/${registroId}/datosMascotas.json`;
-    
+    conosle.log(registroId)
             // Realizar una solicitud PATCH para actualizar la ubicación dentro de datosMascotas
             fetch(urldatosmascotas, {
                 method: 'PATCH',
@@ -325,7 +325,7 @@
     <script>
         function insertarDatosMascota() {
             const urlParams = new URLSearchParams(window.location.search);
-            const registroId = urlParams.get("mascota");
+            const registroId = 502;
             const urldatosmascotas = `https://smartpet-1d59e-default-rtdb.firebaseio.com/smartpet/mascotas/${registroId}.json`;
 
             fetch(urldatosmascotas)
